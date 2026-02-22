@@ -1,8 +1,22 @@
 # Agent-First Harness
 
-This repository defines a practical operating system for autonomous software delivery:
-humans set intent and constraints, agents perform implementation, and the repository
-artifacts are the source of truth for decisions, progress, and verification.
+This repository defines a practical operating model for autonomous software delivery:
+humans set intent and constraints, agents perform implementation, and repository artifacts
+are the system of record for decisions, progress, and verification.
+
+## Inspiration
+
+This work is inspired by OpenAI's [Harness Engineering](https://openai.com/index/harness-engineering/).
+It also incorporates selected concepts from [gsd-build/get-shit-done](https://github.com/gsd-build/get-shit-done),
+especially artifact-first planning, mechanical quality gates, and disciplined execution loops.
+
+## At a Glance
+
+- Start from one idea, not a manual setup checklist.
+- Keep plans, requirements, and phase state as versioned artifacts.
+- Run agents in parallel with explicit write ownership (`touches:`).
+- Enforce architecture, quality, and documentation rules mechanically.
+- Convert recurring failures into harness improvements.
 
 ## What This Project Is About
 
