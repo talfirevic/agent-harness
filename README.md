@@ -18,6 +18,23 @@ especially artifact-first planning, mechanical quality gates, and disciplined ex
 - Enforce architecture, quality, and documentation rules mechanically.
 - Convert recurring failures into harness improvements.
 
+## Install in Your Repository (Web Installer)
+
+Run this from the root of the repository where you want to use the harness:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/talfirevic/agent-harness/main/install.sh | bash
+```
+
+Then verify installation:
+
+```bash
+./scripts/harness/readiness-check.sh
+./scripts/harness/check-all.sh
+```
+
+To pull the latest harness update later, run the same installer command again.
+
 ## What This Project Is About
 
 The core concept is not "run a script." The core concept is a repeatable delivery model
