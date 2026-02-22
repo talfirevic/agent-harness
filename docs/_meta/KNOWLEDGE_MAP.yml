@@ -1,0 +1,26 @@
+required_docs:
+  - path: AGENTS.md
+    owner: engineering
+    freshness_days: 30
+  - path: PROJECT.md
+    owner: product
+    freshness_days: 14
+  - path: REQUIREMENTS.md
+    owner: product
+    freshness_days: 14
+  - path: docs/architecture/ARCHITECTURE.md
+    owner: engineering
+    freshness_days: 30
+  - path: docs/design/STYLE_GUIDE.md
+    owner: design
+    freshness_days: 30
+  - path: docs/quality/INVARIANTS.md
+    owner: engineering
+    freshness_days: 30
+  - path: .planning/STATE.md
+    owner: engineering
+    freshness_days: 7
+link_contracts:
+  req_to_plan_glob: .planning/phases/**/PLAN.md
+  req_to_verify_glob: .planning/phases/**/VERIFICATION.md
+  state_to_gap_glob: .planning/gaps/GAP-*.md

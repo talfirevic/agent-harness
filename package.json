@@ -1,0 +1,28 @@
+{
+  "name": "agent-harness-template",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": "22.x",
+    "npm": "10.x"
+  },
+  "scripts": {
+    "lint": "./scripts/lint.sh",
+    "typecheck": "./scripts/typecheck.sh",
+    "test": "./scripts/unit-test.sh",
+    "verify": "make verify",
+    "lint:node": "eslint . --max-warnings=0",
+    "typecheck:node": "tsc --noEmit",
+    "test:node": "vitest run"
+  },
+  "devDependencies": {
+    "@types/node": "22.10.2",
+    "@typescript-eslint/eslint-plugin": "8.18.0",
+    "@typescript-eslint/parser": "8.18.0",
+    "eslint": "9.17.0",
+    "prettier": "3.4.2",
+    "typescript": "5.6.3",
+    "vitest": "2.1.8"
+  }
+}

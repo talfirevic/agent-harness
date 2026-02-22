@@ -1,0 +1,16 @@
+name: doc-gardener
+
+on:
+  schedule:
+    - cron: '0 3 * * *'
+  workflow_dispatch:
+
+jobs:
+  doc_gardener:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: ./scripts/harness/provision-env.sh --mode local --install-deps false
+      - run: ./scripts/harness/docs-lint.sh
+      - run: ./scripts/harness/check-artifact-sync.sh
+      - run: ./scripts/harness/knowledge-contract.sh

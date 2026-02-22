@@ -1,0 +1,5 @@
+default_deployment_target: github-actions-docker
+options:
+  - github-actions-docker
+  - vercel
+  - fly-io

@@ -1,0 +1,5 @@
+{
+  "name": "agent-harness",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:22",
+  "postCreateCommand": "./scripts/harness/verify-env.sh"
+}

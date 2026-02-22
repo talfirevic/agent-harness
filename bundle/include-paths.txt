@@ -1,0 +1,32 @@
+# Installer-managed bundle paths.
+# Directories are included recursively; files are included as-is.
+
+.claude
+.devcontainer
+.planning
+docs
+scripts/harness
+scripts/bootstrap
+scripts/dev-up.sh
+scripts/lint.sh
+scripts/provision-env
+scripts/scaffold-harness
+scripts/test-all.sh
+scripts/typecheck.sh
+scripts/unit-test.sh
+scripts/verify-env
+tests
+src
+.github/workflows/ci.yml
+.github/workflows/doc-gardener.yml
+AGENTS.md
+HARNESS_PRINCIPLES.md
+PROJECT.md
+REQUIREMENTS.md
+paybook.md
+package.json
+tsconfig.json
+eslint.config.mjs
+.prettierrc.json
+vitest.config.ts
+Makefile

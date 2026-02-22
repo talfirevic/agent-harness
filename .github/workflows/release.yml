@@ -1,0 +1,27 @@
+name: release-bundle
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: chmod +x ./scripts/release/build-bundle.sh
+      - run: ./scripts/harness/readiness-check.sh
+      - run: ./scripts/release/build-bundle.sh --version "${GITHUB_REF_NAME#v}"
+      - uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ github.ref_name }}
+          generate_release_notes: true
+          files: |
+            dist/release/harness-bundle.tar.gz
+            dist/release/sha256sums.txt
+            dist/release/VERSION
+            dist/release/MANIFEST.txt

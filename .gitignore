@@ -1,0 +1,36 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor/IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Node dependencies and logs
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Build and test artifacts
+dist/
+coverage/
+.nyc_output/
+*.tsbuildinfo
+
+# Local environment/config
+.env
+.env.*
+!.env.example
+
+# Harness/runtime local artifacts
+.harness-managed-files
+.harness-bundle-version
+
+# Temporary files
+tmp/
+.tmp/

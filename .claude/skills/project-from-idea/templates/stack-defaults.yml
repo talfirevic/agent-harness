@@ -1,0 +1,5 @@
+default_stack: typescript-node
+options:
+  - typescript-node
+  - python-fastapi
+  - go-service
