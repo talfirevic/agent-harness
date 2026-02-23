@@ -1,17 +1,30 @@
 # Agent-First Harness
 
-Agent-First Harness is an operating model for autonomous software delivery.
+Agent-First Harness is a Claude Code toolkit: a structured set of tools, skills, agents,
+hooks, and checks for autonomous software delivery.
 Humans define intent and constraints, agents implement, and repository artifacts stay
 as the source of truth for scope, status, and verification.
 
 It is designed to reduce ad-hoc "vibe coding" drift by enforcing planning, ownership,
-and quality gates mechanically.
+and quality gates mechanically to maximize output quality.
+
+## Claude Code Required
+
+This implementation is built for Claude Code. The harness is intentionally composed as
+Claude Code-native tools and skills to maximize reliability and output quality.
+
+- Required structure includes `.claude/skills`, `.claude/agents`, and `.claude/settings.json`.
+- Hooks are wired via Claude Code environment variables (for example `$CLAUDE_PROJECT_DIR`).
+- Harness checks (`readiness-check`, `verify-env`, lock/orchestration checks) assert these Claude artifacts exist.
+
+If you are not running in a Claude Code workflow, this harness will require adaptation.
 
 [Install](#install-in-an-existing-repository-web-installer) | [First 10 Minutes](#first-10-minutes) | [How It Works](#how-it-works) | [Commands](#core-commands) | [Troubleshooting](#troubleshooting) | [Playbook](#read-next)
 
 ## What You Get
 
 - Idea to structured project bootstrap in one command.
+- A curated Claude Code toolkit (skills, agents, hooks, and verification scripts).
 - Artifact-first delivery (`PROJECT.md`, `REQUIREMENTS.md`, `.planning/*`).
 - Parallel-safe execution with explicit `touches:` ownership.
 - Mechanical quality and architecture enforcement before merge.
